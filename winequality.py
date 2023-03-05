@@ -27,9 +27,6 @@ class wine_prediction:
     #Data Preprocessing
     #seperating the quality and other columns 
     X = wine_dataset.drop('quality',axis=1)
-
-    X.head()
-
     #binaryizing the values of quality data set
     Y = wine_dataset['quality'].apply(lambda value:1 if value>=7 else 0)
     Y.head()
